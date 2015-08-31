@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+        <link href="css/form.css" rel="stylesheet">
+ 
+<!--        <script>
+            $(document).ready(function(){
+                $("button").click(function(event){
+                var buttonID = event.target.id;
+                $.get("/Projectv1/DatabaseAccess",
+                    function(resp){
+                        $("#database").empty().append("<h3>json result</h3>");
+                        $.each(resp, function(i,objectId){
+                            $("#database").append(i+1, ". " + objectId.objectId + "</br>");
+                        });     
+                    });              
+                });
+            });
+            </script>-->
+            
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/form.css">
+    </head>
+    <body>
+        <header>
+            <div class="head">
+            <h1>Smart Trip</h1>
+            </div>
+            <div class="nav">
+                <div class="container">
+                    <ul class="pull-left">
+                        <li><a href="#" class="current">Home</a></li>
+                        <li><a href="#">Truck Agent</a></li>
+                        <li><a href="#">Driver</a></li>
+                    </ul>
+                    
+                    <ul class="pull-right">
+                        
+                        <li><a href="#">Sign in</a></li>
+                        <li><a href="#">Sign up</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div id="map" style="float:left;width:63%; height:100%"></div>
+
+        <!--<form action="routeBlock.java" method="Get">-->  
+        <fieldset>
+            
+            <div class="input">
+                <div class="container">
+                    <form>
+                        From:<input id="start-pac" class="controls1" type="text"
+                                                     placeholder="Enter a location"><br>
+                        To:<input id="end-pac" class="controls1" type="text"
+                                                   placeholder="Enter a location"><br>
+                        Truck Height:<input id="height" type="text" class="controls" 
+                                                             name="truck-height"><br> 
+                        Truck Length:<input id="length" type="text" class="controls"
+                                                             name="truck-length"><br> 
+                        Truck Width:<input id="width" type="text" class="controls"
+                                                            name="truck-width">
+                   
+                    </form>
+                        
+                </div>
+            </div>
+            
+            <input type="submit" id="submit" value="Submit" />  
+        </fieldset>
+        <!--</form>-->
+  
+        <br />
+        
+        <fieldset>
+            
+        </fieldset>
+
+        <div id="directionsPanel" class="panel" style="float:right; width:34%; height:60%">
+            <p>Total Distance: <span id="total"></span></p>
+        </div>
+
+        
+        <script src="js/map.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?signed_in=true&libraries=places&callback=initMap"
+        async defer></script>
+                <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<!--        <button id="marker" type="button">marker</button>
+        <button id="test" type="button">test</button>
+        <p>result</p>
+        <p>result</p>
+        <p>result</p>
+        <div id="database"></div></br></br>-->
+        
+    </body>
+</html>
+
+
